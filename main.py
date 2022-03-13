@@ -1,7 +1,7 @@
 '''
-CopyRight(C) 2021 Wangziyu01 All Rights Reserved.
+CopyRight(C) 2022 Wangziyu01 All Rights Reserved.
 
-Versition:1.3.6
+Versition:1.3.7
 
 Modify Log:
 2021/12/04 Create
@@ -11,6 +11,7 @@ Modify Log:
 2021/12/11 Add turn to angle Funtion
 2021/12/18 Add Turn to original direction Funtion
 2021/12/18 Add Variable Range List
+2022/3/13 Change copyright information
 
 funtion list:
 move(s,v,angle)
