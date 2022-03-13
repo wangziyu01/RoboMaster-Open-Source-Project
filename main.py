@@ -12,8 +12,9 @@ Modify Log:
 2021/12/18 Add Turn to original direction Funtion
 2021/12/18 Add Variable Range List
 2022/3/13 Change copyright information
+2022/3/13 Fixed several bugs
 
-funtion list:
+Funtion list:
 move(s,v,angle)
 moveTime(t,v,angle)
 turnToAngle(v,targetAngle)
@@ -34,7 +35,7 @@ variable_y0 = 0
 
 
 def start():
-    pass
+    #Please call the function here(move/moveTime/turnToAngle)
 
 def move(s,v,angle):
     global variable_X
