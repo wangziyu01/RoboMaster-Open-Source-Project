@@ -7,3 +7,7 @@ Please copy this program to "RoboMaster" App
 ## RoboMaster高速移动
 这是为RoboMaster EP 编写的程序。更多信息，请查看主程序。
 请将代码复制进“RoboMaster”app中的Python程序中。
+
+# JP
+## RoboMasterは高速で移動します
+これはRoboMasterEP用に作成されたプログラムです。 詳細については、メインプログラムを参照してください。 「RoboMaster」アプリのPythonプログラムにコードをコピーしてください。
