@@ -13,6 +13,7 @@ Modify Log:
 2021/12/18 Add Variable Range List
 2022/3/13 Change copyright information
 2022/3/13 Fixed several bugs
+2022/3/13 Fixed several bugs
 
 Funtion list:
 move(s,v,angle)
