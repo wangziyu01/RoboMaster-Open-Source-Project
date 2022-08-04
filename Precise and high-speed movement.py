@@ -1,5 +1,5 @@
 '''
-CopyRight(C) 2022 Wangziyu01 All Rights Reserved.
+CopyRight(C) 2022 wangziyu01 All Rights Reserved.
 
 Versition:1.3.7
 
@@ -14,6 +14,7 @@ Modify Log:
 2022/3/13 Change copyright information
 2022/3/13 Fixed several bugs
 2022/3/13 Fixed several bugs
+2022/8/5  Fixed several bugs Changed the name of the "moveTime" function
 
 Funtion list:
 move(s,v,angle)
@@ -36,7 +37,8 @@ variable_y0 = 0
 
 
 def start():
-    #Please call the function here(move/moveTime/turnToAngle)
+    #Please call the function here(move/moveTime/turnToAngle/turnToInitial)
+    #请在此处调用函数（move/moveWithTime/turnToAngle/turnToInitial)
 
 def move(s,v,angle):
     global variable_X
@@ -57,7 +59,7 @@ def move(s,v,angle):
         chassis_ctrl.move_degree_with_speed(v,angle)
     chassis_ctrl.move_with_speed(0,0,0)
 
-def moveTime(v, t, angle):
+def moveWithTime(v, t, angle):
     robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
     chassis_ctrl.move_degree_with_speed(v,angle)
     time.sleep(t)
