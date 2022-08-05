@@ -1,4 +1,4 @@
-# RoboMaster机甲大师情少年挑战赛开源项目
+# RoboMaster机甲大师青少年挑战赛开源项目
 ## CN
 ### RoboMaster高速移动
 这是为RoboMaster EP 编写的程序。如要查看更多信息，请参考主程序中的注释。
@@ -10,7 +10,7 @@
 5.新建程序，并将本项目仓库中的「Precise and high-speed movement.py」文件中的代码复制到刚才新建的程序中;
 ****
 ## EN
-### RoboMaster-Accurate-high-speed-movement
+### RMYC Open Source Project
 This is a program that can be your RoboMaster EP for high-speed and precise movement. For more information, please check the notes of the main program.
 Please copy this program to "RoboMaster" App
 Instructions for use:
