@@ -1,7 +1,7 @@
 '''
 CopyRight(C) 2022 wangziyu01 All Rights Reserved.
 
-Versition:1.4.0
+Versition:1.4.2
 
 Modify Log:
 2021/12/04 Create
