@@ -21,6 +21,6 @@ Instructions for use:
 4. Click "Python" in the upper navigation bar;
 5. Create a new program, and copy the code in the "Precise and high-speed movement.py" file in the project repository to the newly created program;
 ****
-说明：如果你需要在别处分发、使用，请标注原文件来源。如果你需要参与贡献或修改程序，请联系我：3280894524@qq.com 或 wangziyu0305@outlook.com
+说明：如果你需要在别处分发、使用，请标注原文件来源。如果你需要参与贡献或修改程序，请将你的GitHub用户名发送至：3280894524@qq.com 或 wangziyu0305@outlook.com
 
-Note: If you need to distribute and use it elsewhere, please indicate the source of the original file. If you need to contribute or modify the program, please contact me: 3280894524@qq.com or wangziyu0305@outlook.com
+Note: If you need to distribute and use it elsewhere, please indicate the source of the original file. If you need to contribute or modify the program, please send your GitHub username to: 3280894524@qq.com or wangziyu0305@outlook.com
