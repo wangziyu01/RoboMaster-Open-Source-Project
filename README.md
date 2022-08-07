@@ -8,6 +8,8 @@
 3.点击「我的程序」;
 4.点击上方导航栏「Python」;
 5.新建程序，并将本项目仓库中的「Precise and high-speed movement.py」文件中的代码复制到刚才新建的程序中;
+
+如果你想要最稳定的效果，请使用main分支中的程序，如果你想要最新的功能，请使用Dev分支中的程序。
 ****
 # EN
 ## RMYC Open Source Project
@@ -20,6 +22,8 @@ Instructions for use:
 3. Click "My Programs";
 4. Click "Python" in the upper navigation bar;
 5. Create a new program, and copy the code in the "Precise and high-speed movement.py" file in the project repository to the newly created program;
+
+If you want the most stable results, use the program in the main branch, and if you want the latest features, use the program in the Dev branch.
 ****
 说明：如果你需要在别处分发、使用，请标注原文件来源。如果你需要参与贡献或修改程序，请将你的GitHub用户名发送至：3280894524@qq.com 或 wangziyu0305@outlook.com
 
