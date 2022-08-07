@@ -14,7 +14,7 @@ Modify Log:
 2022/3/13 Change copyright information
 2022/3/13 Fixed several bugs
 2022/3/13 Fixed several bugs
-2022/8/5  Fixed several bugs Changed the name of the "moveTime" function
+2022/8/7  Fixed several bugs Change the function name "moveTime" to "moveWithTime"
 
 Funtion list:
 move(s,v,angle)
