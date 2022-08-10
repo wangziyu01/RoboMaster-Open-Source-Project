@@ -1,3 +1,7 @@
+'''
+Copyright(C) 2022 wangziyu0305 wangziyu01 Gavin向
+'''
+
 #导入第三方库
 from ast import Try
 import cv2
@@ -21,11 +25,11 @@ def connect_tt_robot(IP):#连接无人机并初始化函数
 
 def Show_UI(frame):#显示UI函数
     attitude = Aimbot_tt.get_attitude()
-    Aimbot_tt_height = Aimbot_tt.battery.get_battery()
+    Aimbot_tt_battery = Aimbot_tt.battery.get_battery()
     cv2.putText(frame, "AimBot Flying System 2023", (235, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
     string1 = "attitude:"+ str(attitude)
     cv2.putText(frame,string1, (20, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-    string2 = "battery:"+ str(Aimbot_tt_height) + ' %'
+    string2 = "battery:"+ str(Aimbot_tt_battery) + ' %'
     cv2.putText(frame,string2, (20, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     return frame
 #上色
@@ -57,11 +61,14 @@ if __name__ == "__main__":
     Aimbot_tt = robot.Drone()#创建Drone类的实例对象Aimbot_tt
     time.sleep(0.05);#缓冲
     try:#尝试(通过判断程序是否报错)
-        connect_tt_robot('192.168.10.2')#连接无人机并初始化(IP需要更改)
+        connect_tt_robot('192.168.10.3')#连接无人机并初始化(IP需要更改) 请使用ipconfig
         print("如果按q程序窗口无法关闭，请关闭编辑器 \n")
         Aimbot_tt_camera = Aimbot_tt.camera#获取camera对象
         Aimbot_tt_camera.set_down_vision(0) #下视 1开启 0关闭  下视方法
         Aimbot_tt_camera.start_video_stream(display=False)#打开无人机视频流的传输
+        Aimbot_tt_camera.set_fps('high')
+        Aimbot_tt_camera.set_resolution('high')
+        Aimbot_tt_camera.set_bitrate(6)
         while True:
             Aimbot_tt_video = Aimbot_tt_camera.read_cv2_image()#通过Opencv(cv2)获取无人机的视频流
             Aimbot_tt_video = Show_UI(Aimbot_tt_video) #gray2rgb(Aimbot_tt_video,color_dict)
