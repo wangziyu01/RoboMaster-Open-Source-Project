@@ -13,6 +13,7 @@ Modify Log:
 2022/3/13 Fixed several bugs
 2022/3/13 Fixed several bugs
 2022/8/7  Fixed several bugs Change the function name "moveTime" to "moveWithTime"
+2022/9/3  Fixed an issue that could cause the program to terminate abnormally
 Funtion list:
 move(s,v,angle)
 moveTime(t,v,angle)
