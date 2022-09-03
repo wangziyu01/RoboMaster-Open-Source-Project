@@ -1,6 +1,6 @@
 '''
-CopyRight(C) 2022 wangziyu01 All Rights Reserved.
-Versition:1.4.2 release
+CopyRight(C) 2022 wangziyu01 and wangziyu0305 All Rights Reserved.
+Versition:1.4.7 release
 Modify Log:
 2021/12/04 Create
 2021/12/04 Fixed several bugs
@@ -13,7 +13,7 @@ Modify Log:
 2022/3/13 Fixed several bugs
 2022/3/13 Fixed several bugs
 2022/8/7  Fixed several bugs Change the function name "moveTime" to "moveWithTime"
-2022/9/3  Fixed an issue that could cause the program to terminate abnormally
+2022/9/3  Fixed an issue that could cause the program to terminate abnormally and added an empty function for developers to use as development tests
 Funtion list:
 move(s,v,angle)
 moveTime(t,v,angle)
@@ -24,6 +24,7 @@ v:-600~600
 s:0~infinity
 angle:-180~180
 targetAngle:-180~180
+t1/t2:-infinity~infinity
 '''
 
 variable_X = 0
@@ -84,3 +85,6 @@ def turnToInitial(v):
         chassis_ctrl.rotate_with_degree(rm_define.anticlockwise, abs(error))
 
     chassis_ctrl.move_with_speed(0,0,0)
+    
+def test(t1, t2):
+    pass
