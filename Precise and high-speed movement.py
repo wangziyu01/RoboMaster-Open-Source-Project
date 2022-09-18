@@ -1,5 +1,6 @@
 '''
 CopyRight(C) 2022 wangziyu01 and wangziyu0305 All Rights Reserved.
+版权所有(C) 2022 wangziyu01 和 wangziyu0305 保留所有权利
 Versition:1.4.7 release
 Modify Log:
 2021/12/04 Create
