@@ -11,15 +11,4 @@
 
 说明：如果你需要在别处分发、使用，请标注原文件来源。如果你需要参与贡献或修改程序，请将你的GitHub用户名发送至：3280894524@qq.com 或 wangziyu0305@outlook.com
 ****
-# EN
-## RMYC Open Source Project
-### Accurate high -speed movement
-These are procedures for Robomaster EP. If you want to view more information, please refer to the comments in the main program.
-Please copy this program to "RoboMaster" App
-Instructions for use:
-1. Open the RoboMaster APP;
-2. Click "Lab";
-3. Click "My Programs";
-4. Click "Python" in the upper navigation bar;
-5. Create a new program, and copy the code in the "Precise and high-speed movement.py" file in the project repository to the newly created program;
-说明：如果你需要在别处分发、使用，请标注原文件来源。如果你需要参与贡献或修改程序，请将你的GitHub用户名发送至：3280894524@qq.com 或 wangziyu0305@outlook.com
+
