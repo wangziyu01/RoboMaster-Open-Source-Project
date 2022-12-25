@@ -32,17 +32,16 @@ def Show_UI(frame):#显示UI函数
     string2 = "battery:"+ str(Aimbot_tt_battery) + ' %'
     cv2.putText(frame,string2, (20, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     return frame
-#上色
+#上色（未使用）
+"""
 color_dict = {"black": [0, 0, 0], 
               "red": [238, 0, 0], 
               "pink": [255, 192, 203]}
 def gray2rgb(gray, color_dict):
-    """
     convert gray image into RGB image
     :param gray: single channel image with numpy type 
     :param color_dict: color map
     :return:  rgb image
-    """
     # 1：创建新图像容器
     rgb_image = np.zeros(shape=(*gray.shape, 3))
     # 2： 遍历每个像素点
@@ -57,12 +56,13 @@ def gray2rgb(gray, color_dict):
                 rgb_image[i, j, :] = color_dict["pink"]
 
     return rgb_image.astype(np.uint8)
+    """
 if __name__ == "__main__":
     Aimbot_tt = robot.Drone()#创建Drone类的实例对象Aimbot_tt
     time.sleep(0.05);#缓冲
     try:#尝试(通过判断程序是否报错)
         connect_tt_robot('192.168.10.3')#连接无人机并初始化(IP需要更改) 请使用ipconfig
-        print("如果按q程序窗口无法关闭，请关闭编辑器 \n")
+        print("如果按q程序窗口无法关闭，请关闭程序编辑器 \n")
         Aimbot_tt_camera = Aimbot_tt.camera#获取camera对象
         Aimbot_tt_camera.set_down_vision(0) #下视 1开启 0关闭  下视方法
         Aimbot_tt_camera.start_video_stream(display=False)#打开无人机视频流的传输
