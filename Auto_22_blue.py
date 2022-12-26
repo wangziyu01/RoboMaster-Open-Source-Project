@@ -1,3 +1,7 @@
+"""
+RMYC2022 小学组 蓝方自动程序
+Bug:能量机关Pitch轴有时混乱
+"""
 list_maker_list = RmList()
 list_number_list = RmList()
 list_shoot_list = RmList()
