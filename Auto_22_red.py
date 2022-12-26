@@ -1,3 +1,7 @@
+"""
+RMYC2022小学组红方自动程序
+Bug:能量机关俯仰轴控制存在问题
+"""
 list_maker_list = RmList()
 list_number_list = RmList()
 list_shoot_list = RmList()
