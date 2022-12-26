@@ -1,6 +1,6 @@
 '''
 使用前，请阅读使用说明
-请安装 Robomaster Python SDK
+请安装 Robomaster Python SDK 和 OpenCV-Python
 '''
 
 #导入第三方库
