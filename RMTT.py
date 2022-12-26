@@ -1,5 +1,6 @@
 '''
-Copyright(C) 2022 wangziyu0305 wangziyu01 Gavin向
+使用前，请阅读使用说明
+请安装 Robomaster Python SDK
 '''
 
 #导入第三方库
