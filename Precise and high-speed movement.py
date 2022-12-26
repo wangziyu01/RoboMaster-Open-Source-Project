@@ -14,7 +14,7 @@ Modify Log:
 2022/3/13 Fixed several bugs
 2022/3/13 Fixed several bugs
 2022/8/7  Fixed several bugs Change the function name "moveTime" to "move_with_time"
-2022/9/3  Fixed an issue that could cause the program to terminate abnormally and added an empty function for developers to use as development tests
+2022/9/3  Fixed an issue that could cause the program to terminate abnormally
 Function list:
 move(s,v,angle)
 moveTime(t,v,angle)
@@ -25,7 +25,6 @@ v:-600~600
 s:0~infinity
 angle:-180~180
 target_angle:-180~180
-t1/t2:-infinity~infinity
 """
 
 variable_X = 0
@@ -114,11 +113,3 @@ def turn_to_initial(v: int):
         chassis_ctrl.rotate_with_degree(rm_define.anticlockwise, abs(error))
 
     chassis_ctrl.move_with_speed(0, 0, 0)
-
-
-def test():
-    """
-    :
-    :return: None
-    """
-    pass
