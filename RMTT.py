@@ -1,5 +1,5 @@
 '''
-使用前，请阅读使用说明
+使用前，请参阅使用说明（于Discussions）
 请安装 Robomaster Python SDK 和 OpenCV-Python
 '''
 
