@@ -21,7 +21,7 @@ Bugs: 蓝方会出现有时ATK,Pitch轴角度胡乱的问题，改成固定上�
 
 import time
 
-# 声明各全局变量(传递数据给函数使用，在该函数中得加入"global")
+# 声明各全局变量(传递数据给函数使用，在该函数中得加入"global") 全局变量可更改的如下：color（blue或red 根据己方阵营更改）bei_shu（相机放大倍数 1～4） 
 color = "red"  # 设定己方阵营(颜色) "red"/"blue"
 bei_shu = 2 # 相机放大倍数可调,用于"ATK"\"Base"   （2倍似乎通用：高墙、L形地块都行）
 variable_pitch_0 = 0    # 记录识别到26项数据时，云台的俯仰角度
