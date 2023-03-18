@@ -7,7 +7,7 @@
 
 Copyright(C) 2023 wangziyu0305
 
-Ver 2.0.4 Pre-Release
+Ver 2.0.0 Release
 
 Bug(s):
 
