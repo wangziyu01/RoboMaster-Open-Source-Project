@@ -35,27 +35,25 @@ variable_y0 = 0
 
 
 def start():
-    """
-
-    :rtype: None
-    """
-    pass
+    move_with_time(1, 1, -90)
+    # turn_to_angle(300, -90)
+    # turn_to_initial(300)
+    # move(1, 1.5,0)
     # Please call the function here(move/moveTime/turnToAngle/turn_to_initial)
     # 请在此处调用函数（move/move_with_time/turnToAngle/turn_to_initial)
 
 
-def move(s, v, angle):
+def move(s, v, angle) -> None:
     """
-
     :param s: 移动距离 单位：米(m)
     :param v: 移动速度 单位：m/s
     :param angle: 角度 单位：度（°）
     """
-    global variable_X
-    global variable_Y
-    global variable_s
-    global variable_x0
-    global variable_y0
+    # global variable_X
+    # global variable_Y
+    # global variable_s
+    # global variable_x0
+    # global variable_y0
     robot_ctrl.set_mode(rm_define.robot_mode_chassis_follow)
     variable_X = 0
     variable_Y = 0
@@ -71,7 +69,7 @@ def move(s, v, angle):
     chassis_ctrl.move_with_speed(0, 0, 0)
 
 
-def move_with_time(v: int, t: int, angle: int):
+def move_with_time(v, t, angle):
     """
 
     :rtype: none 无返回值
@@ -81,18 +79,25 @@ def move_with_time(v: int, t: int, angle: int):
     """
     robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
     chassis_ctrl.move_degree_with_speed(v, angle)
+    chassis_ctrl.set_rotate_speed(v)
+    w1 = w4 = (v*math.cos(angle) + v*math.sin(angle)) / 0.05075 *94.2
+    w2 = w3 = (v*math.cos(angle) - v*math.sin(angle)) / 0.05075 *94.2
+    print(str(w1) + " "+ str(w2) + ' ' + str(w3) + ' ' + str(w4))
+    chassis_ctrl.set_wheel_speed(w1,w2,w3,w4)
     time.sleep(t)
     chassis_ctrl.move_with_speed(0, 0, 0)
+    
 
 
-def turnToAngle(v: int, target_angle: int):
+
+def turn_to_angle(v, target_angle):
     chassis_ctrl.set_rotate_speed(v)
     robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
     error = target_angle - chassis_ctrl.get_position_based_power_on(rm_define.chassis_rotate)
     if error > 0:
         chassis_ctrl.rotate_with_degree(rm_define.clockwise, error)
     else:
-        chassis_ctrl.rotate_with_degree(rm_define.anticlockwise, error)
+        chassis_ctrl.rotate_with_degree(rm_define.anticlockwise, abs(error))
 
     chassis_ctrl.move_with_speed(0, 0, 0)
 
@@ -103,7 +108,7 @@ def turn_to_initial(v: int):
     :param v:速度 单位：m/s
     :return: None
     """
-    variable_target_angle: int = 0
+    variable_target_angle = 0
     chassis_ctrl.set_rotate_speed(v)
     robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
     error = variable_target_angle - chassis_ctrl.get_attitude(rm_define.chassis_yaw)
