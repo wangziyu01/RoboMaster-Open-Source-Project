@@ -35,10 +35,6 @@ variable_y0 = 0
 
 
 def start():
-    move_with_time(1, 1, -90)
-    # turn_to_angle(300, -90)
-    # turn_to_initial(300)
-    # move(1, 1.5,0)
     # Please call the function here(move/moveTime/turnToAngle/turn_to_initial)
     # 请在此处调用函数（move/move_with_time/turnToAngle/turn_to_initial)
 
@@ -70,17 +66,11 @@ def move(s, v, angle) -> None:
 
 
 def move_with_time(v, t, angle):
-    """
-
-    :rtype: none 无返回值
-    :param v: 速度 单位：m/s
-    :param t: 运动时间 单位：秒(s)
-    :param angle: 角度 单位：度（°）
-    """
+    # 使用欧拉距离公式（勾股定理）重构函数，不会有PID回调）
     robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
     chassis_ctrl.move_degree_with_speed(v, angle)
     chassis_ctrl.set_rotate_speed(v)
-    w1 = w4 = (v*math.cos(angle) + v*math.sin(angle)) / 0.05075 *94.2
+    w1 = w4 = (v*math.cos(angle) + v*math.sin(angle)) / 0.05075 *94.2 # 0.5075：来自对于EP轮子半径的测量
     w2 = w3 = (v*math.cos(angle) - v*math.sin(angle)) / 0.05075 *94.2
     print(str(w1) + " "+ str(w2) + ' ' + str(w3) + ' ' + str(w4))
     chassis_ctrl.set_wheel_speed(w1,w2,w3,w4)
@@ -103,11 +93,6 @@ def turn_to_angle(v, target_angle):
 
 
 def turn_to_initial(v: int):
-    """
-
-    :param v:速度 单位：m/s
-    :return: None
-    """
     variable_target_angle = 0
     chassis_ctrl.set_rotate_speed(v)
     robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
