@@ -1,3 +1,3 @@
-本程序版权所有 [@wangziyu01](https://github.com/wangziyu01)
+本程序代码使用CC0协议，可随意分发、修改。
 
-请在分发及使用程序时保留程序内的版权信息及所有注释，如有问题或想基于本程序修改新程序进行发布，请联系 [sharkymew@qq.com](mailto:sharkymew@qq.com)
+如有问题，请联系 [sharkymew@qq.com](mailto:sharkymew@qq.com)
