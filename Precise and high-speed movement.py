@@ -37,6 +37,7 @@ variable_y0 = 0
 def start():
     # Please call the function here(move/moveTime/turnToAngle/turn_to_initial)
     # 请在此处调用函数（move/move_with_time/turnToAngle/turn_to_initial)
+    pass
 
 
 def move(s, v, angle) -> None:

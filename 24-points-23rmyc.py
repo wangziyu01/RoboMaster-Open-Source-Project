@@ -99,7 +99,8 @@ def addition(item):  # 加法计算函数
     shoot_list = []
     result = item[0] + item[1] + item[2]  # a+b+c
     if result == 24:
-        shoot_list = [item[0], symbol, item[2], item[3]]
+        # 正确的输出应包含三数字与两个加号
+        shoot_list = [item[0], symbol, item[1], symbol, item[2]]
     else:
         result = item[0] + item[1] + item[2] + item[3]  # a+b+c+d
         if result == 24:
